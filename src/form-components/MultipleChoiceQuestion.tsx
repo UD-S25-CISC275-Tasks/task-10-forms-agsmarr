@@ -19,7 +19,9 @@ export function MultipleChoiceQuestion({
             <Form.Group>
                 <Form.Select value={selectedAnswer} onChange={updateSelected}>
                     {options.map((op: string) => (
-                        <option value={op}>{op}</option>
+                        <span key={op}>
+                            <option value={op}>{op}</option>
+                        </span>
                     ))}
                 </Form.Select>
             </Form.Group>
